@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-    <h1>Bienvenido a la tienda PicadasOnline.com</h1>
+    <h1>Bienvenido a la tienda NFStore.com</h1>
     <p>En construccion</p>
     </div>
   );
