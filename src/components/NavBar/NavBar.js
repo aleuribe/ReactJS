@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css'
+import CartWidget from '../CartWidget/CartWidget'
 
 const NavBar = () => {
   
@@ -50,6 +51,10 @@ const NavBar = () => {
 
         </div>
 
+        <div class="col-1">
+          <CartWidget amount='0'/>
+        </div>
+        
     </nav>
 
   )

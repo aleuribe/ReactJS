@@ -1,17 +1,22 @@
-import logo from './logo.svg';
+
 import './App.css';
 import NavBar from './components/NavBar/NavBar'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+
 
 const App = () => {
   return (
     <div className="App">
       <header className="App-header">
         <NavBar />
-        <img src={logo} className="App-logo" alt="logo" />
       </header>
 
-    <h1>Bienvenido a la tienda NFStore.com</h1>
-    <p>Tienda online de Tokens No Fungibles - En construccion</p>
+    <body>
+      <ItemListContainer greeting='Bienvenido a la tienda NFStore.com'/>
+
+      <p>Tienda online de Tokens No Fungibles - En construccion</p>
+    </body>
+    
     </div>
   );
 }
