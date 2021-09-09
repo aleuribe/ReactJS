@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 const CartWidget = (props) => {
     return (
         <button type="button" class="btn btn-success"> 
-        <img src={cart} /> {props.amount} </button>
+        <img src={cart}/> {props.amount} </button>
     )
 }
 
