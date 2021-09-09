@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import CartWidget from '../CartWidget/CartWidget'
+import logo from '../../media/nft_logo.png'
 
 const NavBar = () => {
   
@@ -7,7 +8,7 @@ const NavBar = () => {
 
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <a className="navbar-brand" href="#">
-      <img src="logo192.png" width="30" height="30" class="d-inline-block align-top" alt="" />
+      <img src={logo} width="30" height="30" class="d-inline-block align-top" alt="" />
       NFStore.com
       </a>
 

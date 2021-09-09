@@ -7,8 +7,6 @@ import ItemCount from './components/ItemCount/ItemCount'
 
 const App = () => {
 
- 
-
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +15,8 @@ const App = () => {
 
     <body>
       <ItemListContainer greeting='Bienvenido a la tienda NFStore.com'/>
+
+      <p>Tienda online de Tokens No Fungibles - En construccion</p>
 
       <div class="container">
         <div class="row row-cols-auto gy-4">
@@ -44,8 +44,6 @@ const App = () => {
       </div>
       
       
-
-      <p>Tienda online de Tokens No Fungibles - En construccion</p>
     </body>
     
     </div>

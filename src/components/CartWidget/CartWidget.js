@@ -1,4 +1,4 @@
-import cart from './cart.svg';
+import cart from '../../media/cart.svg';
 import 'bootstrap/dist/css/bootstrap.css'
 
 const CartWidget = (props) => {

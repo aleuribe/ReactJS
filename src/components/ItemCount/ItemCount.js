@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import imagen from './imagen.png'
+import imagen from '../../media/item_empty.png'
 
 const ItemCount = ({stock, initial}) => {
 
