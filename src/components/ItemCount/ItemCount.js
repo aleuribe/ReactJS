@@ -1,5 +1,4 @@
 import {useState} from 'react'
-import imagen from '../../media/item_empty.png'
 
 const ItemCount = ({stock, initial}) => {
 
@@ -19,17 +18,13 @@ const ItemCount = ({stock, initial}) => {
 
     return (
         <div>
-            <div class="card" style={{width:'15rem'}}>
-                <img src={imagen} class="card-img-top" alt="..."/> 
-                <div class="card-body">
-                    <p class="card-text">Cantidad: {counter}</p>
-                    <button class="btn btn-outline-primary" onClick={removeItem}>-</button>
-                    <button class="btn btn-outline-primary" onClick={addItem}>+</button>
-
-                </div>
+            <div class="card-body">
+                <p class="card-text">Cantidad: {counter}</p>
+                <button class="btn btn-outline-primary" onClick={removeItem}>-</button>
+                <button class="btn btn-outline-primary" onClick={addItem}>+</button>
             </div>
-
-    </div>
+            <button class="btn btn-outline-primary">Agregar al carrito</button>
+        </div>
     )
 }
 
