@@ -25,8 +25,8 @@ const ItemCount = ({stock, initial}) => {
                     <p class="card-text">Cantidad: {counter}</p>
                     <button class="btn btn-outline-primary" onClick={removeItem}>-</button>
                     <button class="btn btn-outline-primary" onClick={addItem}>+</button>
-
                 </div>
+                <button class="btn btn-outline-primary">Agregar al carrito</button>
             </div>
 
     </div>
