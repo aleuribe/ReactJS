@@ -28,3 +28,6 @@ npm i --save bootstrap jquery popper.js
 And the following imports were added to index.js:
 import 'bootstrap/dist/js/bootstrap.js'
 import 'bootstrap/dist/css/bootstrap.css'
+
+## Author
+Alejandro Uribe
