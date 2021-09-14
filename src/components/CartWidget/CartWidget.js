@@ -1,9 +1,8 @@
 import cart from '../../media/cart.svg';
-import 'bootstrap/dist/css/bootstrap.css'
 
 const CartWidget = (props) => {
     return (
-        <button type="button" class="btn btn-success"> 
+        <button type="button" className="btn btn-success"> 
         <img src={cart}/> {props.amount} </button>
     )
 }

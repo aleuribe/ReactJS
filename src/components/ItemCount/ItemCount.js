@@ -18,12 +18,12 @@ const ItemCount = ({stock, initial}) => {
 
     return (
         <div>
-            <div class="card-body">
-                <p class="card-text">Cantidad: {counter}</p>
-                <button class="btn btn-outline-primary" onClick={removeItem}>-</button>
-                <button class="btn btn-outline-primary" onClick={addItem}>+</button>
+            <div className="card-body">
+                <p className="card-text">Cantidad: {counter}</p>
+                <button className="btn btn-outline-primary" onClick={removeItem}>-</button>
+                <button className="btn btn-outline-primary" onClick={addItem}>+</button>
             </div>
-            <button class="btn btn-outline-primary">Agregar al carrito</button>
+            <button className="btn btn-outline-primary">Agregar al carrito</button>
         </div>
     )
 }

@@ -4,16 +4,16 @@ const Item = ({id, title, price, pictureUrl, description, stock, initial}) => {
 
     return (
         <div className="col">
-            <div class="card" style={{width:'15rem', padding:'10px 10px 10px 10px'}}>
-                <img src={pictureUrl} class="card-img-top" alt="..."/> 
+            <div className="card" style={{width:'15rem', padding:'10px 10px 10px 10px'}}>
+                <img src={pictureUrl} className="card-img-top" alt="..."/> 
 
-                <div class="card-body">
-                    <h5 class="card-title">{title}</h5>
-                    <p class="card-text">{description}</p>
+                <div className="card-body">
+                    <h5 className="card-title">{title}</h5>
+                    <p className="card-text">{description}</p>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Precio: {price} sats</li>
-                    <li class="list-group-item">Stock: {stock}</li>
+                <ul className="list-group list-group-flush">
+                    <li className="list-group-item">Precio: {price} sats</li>
+                    <li className="list-group-item">Stock: {stock}</li>
                 </ul>
 
                 <ItemCount stock={stock} initial={initial}/>
