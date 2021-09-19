@@ -22,6 +22,8 @@ You will also see any lint errors in the console.
 
 Aditionally to React dependencies, this project uses [Bootstrap, JQuery and Popper.js](https://blog.logrocket.com/how-to-use-bootstrap-with-react-a354715d1121/) for the GUI.  
 
+Also, for the routing, this project uses [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+
 Dependencies installed using this command:
 npm i --save bootstrap jquery popper.js
 
