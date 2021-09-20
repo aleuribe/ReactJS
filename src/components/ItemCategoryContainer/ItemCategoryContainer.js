@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import { useParams } from "react-router-dom";
 
-import ItemDetail from '../ItemDetail/ItemDetail'
+import ItemList from '../ItemList/ItemList';
 
 //Importando la base de datos de NFT temporalmente
 import nftDB from '../NftListDB/nftListDB'
@@ -14,32 +14,32 @@ const getList = () => {
     })
 }
 
-const ItemDetailContainer = (props) => {
-    const {id} = useParams()
+const ItemCategoryContainer = (props) => {
+    const {category} = useParams()
     const [listNFT, setListNFT] = useState(undefined)
 
     useEffect(() => {
       const list = getList()
   
       list.then(result => {
-        const listNFT = result.find(item => item.id === id)
+        const listNFT = result.filter(item => item.category.toLowerCase() === category)
         setListNFT(listNFT)
       })
       return(() => {
           setListNFT(undefined)
       })
-    }, [id])
+    }, [category])
 
-console.log(listNFT)
+    console.log(listNFT)
+
 
     return (
 
         <div className="container">
-            <div className="alert alert-primary" role="alert">Detalle del NFT</div>
-            <ItemDetail item={listNFT}/>
-
+            <div className="alert alert-primary" role="alert">Explorando NFTs de {category}</div>
+            <ItemList items={listNFT}/>
         </div>
     )
 }
 
-export default ItemDetailContainer
+export default ItemCategoryContainer

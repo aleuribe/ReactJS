@@ -1,29 +1,43 @@
 import ItemCount from "../ItemCount/ItemCount"
 
 const ItemDetail = ({item}) => {
-
-    var contador
-    if (item.stock){
-        contador = <ItemCount stock={item.stock} initial={item.initial}/>
+    
+    if(!item) {
+        return (
+            <div>
+                <div className="spinner-border text-primary" role="status" >
+                <span className="visually-hidden">Loading...</span>
+                </div>
+                <div className="spinner-border text-success" role="status">
+                <span className="visually-hidden">Loading...</span>
+                </div>
+                <div className="spinner-border text-danger" role="status">
+                <span className="visually-hidden">Loading...</span>
+                </div>
+                <div className="spinner-border text-warning" role="status">
+                <span className="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        )
     }
-
+    
     return (
         
-        <div class="card text-center">
-        <div class="card-header">
+        <div className="card text-center">
+        <div className="card-header">
             Precio: {item.price? item.price + " satoshis":'Cargando...'}
         </div>
-        <div class="card-body">
-            <h5 class="card-title">{item.title}</h5>
+        <div className="card-body">
+            <h5 className="card-title">{item.title}</h5>
 
             <img src={item.pictureUrl} className="card-img-top" style={{width:'20rem', padding:'10px 10px 10px 10px'}} alt="Cargando imagen del NFT..."/> 
 
-            <p class="card-text">{item.description}</p>
+            <p className="card-text">{item.description}</p>
 
-            {contador}
+            <ItemCount stock={item.stock} initial={item.initial}/>
             
         </div>
-        <div class="card-footer text-muted">
+        <div className="card-footer text-muted">
             Codigo: {item.id}
         </div>
         </div>

@@ -26,6 +26,7 @@ Also, for the routing, this project uses [react-router-dom](https://www.npmjs.co
 
 Dependencies installed using this command:
 npm i --save bootstrap jquery popper.js
+npm install react-router-dom
 
 And the following imports were added to index.js:
 import 'bootstrap/dist/js/bootstrap.js'

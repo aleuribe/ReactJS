@@ -35,7 +35,7 @@ console.log(listNFT)
     return (
 
         <div className="container">
-            <div className="alert alert-primary" role="alert">Detalle del NFT</div>
+            
             <ItemDetail item={listNFT}/>
 
         </div>

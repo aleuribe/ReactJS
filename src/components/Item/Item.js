@@ -1,19 +1,22 @@
 import ItemCount from "../ItemCount/ItemCount"
+import { Link } from 'react-router-dom'
 
-const Item = ({id, title, price, pictureUrl, description, stock, initial}) => {
+const Item = ({id, title, price, pictureUrl, stock, initial}) => {
 
     return (
         <div className="col">
             <div className="card" style={{width:'15rem', padding:'10px 10px 10px 10px'}}>
-                <img src={pictureUrl} className="card-img-top" alt="..."/> 
+
+                <Link to={`/nft/`+id}>
+                    <img src={pictureUrl} className="card-img-top" alt="..."/> 
+                </Link>
 
                 <div className="card-body">
                     <h5 className="card-title">{title}</h5>
-                    <p className="card-text">{description}</p>
                 </div>
                 <ul className="list-group list-group-flush">
-                    <li className="list-group-item">Precio: {price} sats</li>
-                    <li className="list-group-item">Stock: {stock}</li>
+                    <li key={id+'P'} className="list-group-item">Precio: {price} sats</li>
+                    <li key={id+'S'}className="list-group-item">Stock: {stock}</li>
                 </ul>
 
                 <ItemCount stock={stock} initial={initial}/>
