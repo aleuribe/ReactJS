@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 import ItemList from '../ItemList/ItemList.js'
+import WaitIndicator from '../WaitIndicator/WaitIndicator.js'
 
 //Importando la base de datos de NFT temporalmente
 import nftDB from '../NftListDB/nftListDB'
@@ -26,20 +27,7 @@ const ItemListContainer = (props) => {
 
     if(listNFT.length === 0) {
         return (
-            <div>
-                <div className="spinner-border text-primary" role="status" >
-                <span className="visually-hidden">Loading...</span>
-                </div>
-                <div className="spinner-border text-success" role="status">
-                <span className="visually-hidden">Loading...</span>
-                </div>
-                <div className="spinner-border text-danger" role="status">
-                <span className="visually-hidden">Loading...</span>
-                </div>
-                <div className="spinner-border text-warning" role="status">
-                <span className="visually-hidden">Loading...</span>
-                </div>
-            </div>
+            <WaitIndicator />
             )
       }
 

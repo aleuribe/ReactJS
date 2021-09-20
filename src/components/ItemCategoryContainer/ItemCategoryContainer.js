@@ -36,7 +36,7 @@ const ItemCategoryContainer = (props) => {
     return (
 
         <div className="container">
-            <div className="alert alert-primary" role="alert">Explorando NFTs de {category}</div>
+            <div className="alert alert-primary" style={{margin:'10px 0px 10px 0px'}} role="alert">Explorando NFTs de {category}</div>
             <ItemList items={listNFT}/>
         </div>
     )

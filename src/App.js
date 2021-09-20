@@ -6,8 +6,10 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import ItemCategoryContainer from './components/ItemCategoryContainer/ItemCategoryContainer'
 
-import Categorias from '../src/views/Categorias'
 
+import Categorias from '../src/views/Categorias'
+import Informacion from '../src/views/Informacion'
+import SubHeader from '../src/views/SubHeader'
 
 
 const App = () => {
@@ -18,6 +20,7 @@ const navbarItems = [
   {id:3, name:'Categorias'},
   {id:4, name:'Informacion de Pago'},
 ] 
+
   return (
     <div className="App">
 
@@ -27,17 +30,18 @@ const navbarItems = [
           <NavBar items={navbarItems}/>
         </header>
 
-        <img src='../media/nft_logo.png' className="App-logo" alt="logo" style={{width:'10%'}}/>
-        <h1>Bienvenido a la tienda NFStore.com</h1>
-
         <Switch>
           <Route exact path="/">
           
+            <SubHeader />
+
             <ItemListContainer/>
 
           </Route>
 
           <Route path={'/'+navbarItems[0].name.toLowerCase().replace(/\s+/g, '')}>
+
+            <SubHeader />
 
             <ItemListContainer/>
 
@@ -52,7 +56,7 @@ const navbarItems = [
           </Route>
 
           <Route path={'/'+navbarItems[3].name.toLowerCase().replace(/\s+/g, '')}>
-            <h1>Informacion de Pago - En construccion</h1>
+            <Informacion />
           </Route>
 
           <Route path="/nft/:id">

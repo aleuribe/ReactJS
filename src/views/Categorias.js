@@ -11,7 +11,7 @@ const Categorias = (props) => {
     
     return (
         <div className="container">
-            <div className="alert alert-primary" role="alert">Busca NFTs por categoria</div>
+            <div className="alert alert-primary" style={{margin:'10px 0px 10px 0px'}}  role="alert">Busca NFTs por categoria</div>
             <div className="row align-items-start">
                 {uniqueCategories.map(e=> 
                     <div className="col align-self-center">
