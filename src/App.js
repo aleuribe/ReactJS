@@ -1,4 +1,5 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { useState } from 'react'
 
 import './App.css'
 import NavBar from './components/NavBar/NavBar'
@@ -13,13 +14,14 @@ import SubHeader from '../src/views/SubHeader'
 
 
 const App = () => {
+  const [cartProducts, setCartProducts] = useState([])
 
-const navbarItems = [
-  {id:1, name:'Inicio'},
-  {id:2, name:'Popular'},
-  {id:3, name:'Categorias'},
-  {id:4, name:'Informacion de Pago'},
-] 
+  const navbarItems = [
+    {id:1, name:'Inicio'},
+    {id:2, name:'Popular'},
+    {id:3, name:'Categorias'},
+    {id:4, name:'Informacion de Pago'},
+  ] 
 
   return (
     <div className="App">
@@ -27,7 +29,7 @@ const navbarItems = [
       <BrowserRouter> 
 
         <header className="App-header">
-          <NavBar items={navbarItems}/>
+          <NavBar items={navbarItems} cartProducts={cartProducts}/>
         </header>
 
         <Switch>
@@ -35,7 +37,7 @@ const navbarItems = [
           
             <SubHeader />
 
-            <ItemListContainer/>
+            <ItemListContainer setCountFunc={setCartProducts}/>
 
           </Route>
 
@@ -43,7 +45,7 @@ const navbarItems = [
 
             <SubHeader />
 
-            <ItemListContainer/>
+            <ItemListContainer setCountFunc={setCartProducts}/>
 
           </Route>
 
@@ -52,7 +54,7 @@ const navbarItems = [
           </Route>
 
           <Route path={'/'+navbarItems[2].name.toLowerCase().replace(/\s+/g, '')}>
-            <Categorias />
+            <Categorias setCountFunc={setCartProducts}/>
           </Route>
 
           <Route path={'/'+navbarItems[3].name.toLowerCase().replace(/\s+/g, '')}>
@@ -60,7 +62,7 @@ const navbarItems = [
           </Route>
 
           <Route path="/nft/:id">
-            <ItemDetailContainer />
+            <ItemDetailContainer setCountFunc={setCartProducts}/>
           </Route>
 
           <Route path="/cat/:category">

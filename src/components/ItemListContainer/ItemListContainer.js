@@ -13,7 +13,7 @@ function getList() {
     })
 }
 
-const ItemListContainer = (props) => {
+const ItemListContainer = ({setCountFunc}) => {
 
     const [listNFT, setListNFT] = useState([])
 
@@ -35,7 +35,7 @@ const ItemListContainer = (props) => {
 
         <div className="container">
             <div className="alert alert-primary" role="alert">Listado de NFTs en venta</div>
-            <ItemList items={listNFT}/>
+            <ItemList items={listNFT} setCountFunc={setCountFunc}/>
 
         </div>
     )

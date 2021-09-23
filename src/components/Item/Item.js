@@ -1,7 +1,7 @@
 import ItemCount from "../ItemCount/ItemCount"
 import { Link } from 'react-router-dom'
 
-const Item = ({id, title, price, pictureUrl, stock, initial}) => {
+const Item = ({id, title, price, pictureUrl, stock, initial, setCountFunc}) => {
 
     return (
         <div className="col">
@@ -19,7 +19,7 @@ const Item = ({id, title, price, pictureUrl, stock, initial}) => {
                     <li key={id+'S'}className="list-group-item">Stock: {stock}</li>
                 </ul>
 
-                <ItemCount stock={stock} initial={initial}/>
+                <ItemCount stock={stock} initial={initial} setCountFunc={setCountFunc}/>
             </div>
         </div>
     )

@@ -14,7 +14,7 @@ const getList = () => {
     })
 }
 
-const ItemDetailContainer = (props) => {
+const ItemDetailContainer = ({setCountFunc}) => {
     const {id} = useParams()
     const [listNFT, setListNFT] = useState(undefined)
 
@@ -36,7 +36,7 @@ console.log(listNFT)
 
         <div className="container">
             <div className="alert alert-primary" style={{margin:'10px 0px 10px 0px'}} role="alert">Detalle del NFT</div>
-            <ItemDetail item={listNFT}/>
+            <ItemDetail item={listNFT} setCountFunc={setCountFunc}/>
 
         </div>
     )

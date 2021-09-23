@@ -3,7 +3,7 @@ import logo from '../../media/nft_logo.png'
 import { NavLink, Link } from 'react-router-dom'
 
 
-const NavBar = ({items}) => {
+const NavBar = ({items, cartProducts}) => {
   
     return (
 
@@ -38,7 +38,7 @@ const NavBar = ({items}) => {
         </div>
 
         <div>
-          <CartWidget amount='0'/>
+          <CartWidget amount={cartProducts}/>
         </div>
 
       </div>

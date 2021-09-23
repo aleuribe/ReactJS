@@ -1,7 +1,7 @@
 import Item from "../Item/Item"
 import WaitIndicator from "../WaitIndicator/WaitIndicator"
 
-const ItemList = ({items}) => {
+const ItemList = ({items, setCountFunc}) => {
 
     if(!items) {
         return (
@@ -12,7 +12,7 @@ const ItemList = ({items}) => {
     return (
         <>
         <div className="row row-cols-auto gy-4" style={{margin:'10px 10px 10px 10px'}}>
-            {items.map(e => <Item key={e.id} id={e.id} title={e.title} price={e.price} pictureUrl={e.pictureUrl} description={e.description} stock={e.stock} initial={e.initial}/>)}            
+            {items.map(e => <Item key={e.id} id={e.id} title={e.title} price={e.price} pictureUrl={e.pictureUrl} description={e.description} stock={e.stock} initial={e.initial} setCountFunc={setCountFunc}/>)}            
         </div>
         </>
     )

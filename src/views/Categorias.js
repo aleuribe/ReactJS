@@ -2,7 +2,7 @@ import nftDB from "../components/NftListDB/nftListDB"
 import { Link } from 'react-router-dom'
 
 
-const Categorias = (props) => {
+const Categorias = (setCountFunc) => {
     const nft = nftDB
 
     const justCategories = nft.map((cat)=>cat.category)
@@ -21,7 +21,7 @@ const Categorias = (props) => {
                             <div className="card-body">
                                 <h5 className="card-title">{'NFT de '+e}</h5>
 
-                                <Link to={`/cat/`+e.toLowerCase()} className="btn btn-primary"> Explorar </Link>
+                                <Link handler={setCountFunc} to={`/cat/`+e.toLowerCase()} className="btn btn-primary"> Explorar </Link>
                                     
                                 
                             </div>

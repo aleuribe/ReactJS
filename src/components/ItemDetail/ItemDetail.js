@@ -1,23 +1,13 @@
-import ItemCount from "../ItemCount/ItemCount"
+import { useState } from "react"
 
-const ItemDetail = ({item}) => {
+import ItemCount from "../ItemCount/ItemCount"
+import WaitIndicator from "../WaitIndicator/WaitIndicator"
+
+const ItemDetail = ({item, setCountFunc}) => {
     
     if(!item) {
         return (
-            <div>
-                <div className="spinner-border text-primary" role="status" >
-                <span className="visually-hidden">Loading...</span>
-                </div>
-                <div className="spinner-border text-success" role="status">
-                <span className="visually-hidden">Loading...</span>
-                </div>
-                <div className="spinner-border text-danger" role="status">
-                <span className="visually-hidden">Loading...</span>
-                </div>
-                <div className="spinner-border text-warning" role="status">
-                <span className="visually-hidden">Loading...</span>
-                </div>
-            </div>
+            <WaitIndicator />
         )
     }
     
@@ -34,7 +24,7 @@ const ItemDetail = ({item}) => {
 
             <p className="card-text">{item.description}</p>
 
-            <ItemCount stock={item.stock} initial={item.initial}/>
+            <ItemCount stock={item.stock} initial={item.initial} setCountFunc={setCountFunc}/>
             
         </div>
         <div className="card-footer text-muted">

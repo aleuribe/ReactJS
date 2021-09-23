@@ -1,8 +1,12 @@
+import { Link } from 'react-router-dom'
 
 const CartWidget = (props) => {
     return (
-        <button type="button" className="btn btn-success"> 
-        <img src="../media/cart.svg" alt="..."/> {props.amount} </button>
+        <Link to={'/cart'}>
+            <button type="button" className="btn btn-success"> 
+            <img src="../media/cart.svg" alt="..."/> {props.amount} 
+            </button>
+        </Link>
     )
 }
 
